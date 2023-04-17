@@ -3,7 +3,8 @@
     # send the time as an extra var, in seconds
     time_to_wait: 10
   tasks:
-    - ansible.builtin.wait_for:
+    - name: wait {{ time_to_wait_ }} seconds
+      ansible.builtin.wait_for:
         timeout: "{{ time_to_wait }}"
         
         
