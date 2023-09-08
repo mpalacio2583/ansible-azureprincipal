@@ -2,9 +2,12 @@
   vars:
     # send the time as an extra var, in seconds
     time_to_wait: 10
+    should_fail: false
   tasks: 
     - name: wait for task to finish {{ time_to_wait }}
       ansible.builtin.wait_for:
         timeout: "{{ time_to_wait }}"
-        
-        
+    - name: fail if the right variable is set
+      fail:
+      when: should_fail | bool
+      
