@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: localhost:all
   vars:
     # send the time as an extra var, in seconds
     time_to_wait: 10
