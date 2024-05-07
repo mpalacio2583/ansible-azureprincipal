@@ -6,6 +6,7 @@
         client_id: "{{ client_id }}"
         password: "{{ secret }}"
         tenant: "{{ tenant }}"
+        subcription_id: "{{ subscription_id }}"
         all: true
       delegate_to: localhost
       
