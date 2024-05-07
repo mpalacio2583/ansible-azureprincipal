@@ -3,7 +3,6 @@
   tasks:
     - name: Install packaging
       ansible.builtin.pip:
-        executable: /usr/bin/pip3.9
         requirements: /home/runner/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
         state: present
       delegate_to: localhost
