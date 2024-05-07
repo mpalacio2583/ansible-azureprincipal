@@ -4,8 +4,8 @@
     - name: Install packaging
       ansible.builtin.pip:
         executable: /usr/bin/pip3.9
-        name: azure-storage-blob
-        state: latest
+        requirements: /home/runner/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
+        state: installed
       delegate_to: localhost
       
     - name: Get facts for all subscriptions, including ones that are disabled.
