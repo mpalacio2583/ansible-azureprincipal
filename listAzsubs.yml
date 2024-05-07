@@ -1,9 +1,14 @@
 - hosts: localhost
+  gather_facts: false
   tasks:
     - name: Install packaging
       ansible.builtin.pip:
         executable: /usr/bin/pip3.9
         name: packaging
+      delegate_to: localhost
+      
     - name: Get facts for all subscriptions, including ones that are disabled.
       azure.azcollection.azure_rm_subscription_info:
         all: true
+      delegate_to: localhost
+      
