@@ -1,12 +1,6 @@
 - hosts: localhost
   gather_facts: false
-  tasks:
-    - name: Install packaging
-      ansible.builtin.pip:
-        requirements: /home/runner/.ansible/collections/ansible_collections/azure/azcollection/requirements-azure.txt
-        state: present
-      delegate_to: localhost
-      
+  tasks: 
     - name: Get facts for all subscriptions, including ones that are disabled.
       azure.azcollection.azure_rm_subscription_info:
         all: true
