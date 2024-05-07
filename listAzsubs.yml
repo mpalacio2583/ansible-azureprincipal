@@ -4,7 +4,7 @@
     - name: Install packaging
       ansible.builtin.pip:
         executable: /usr/bin/pip3.9
-        name: 'ansible[azure]'
+        name: azure-storage-blob
         state: latest
       delegate_to: localhost
       
