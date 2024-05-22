@@ -2,6 +2,9 @@
   connection: local
   gather_facts: false
   tasks: 
+    - name: Get facts for all subscriptions, including ones that are disabled.
+      azure.azcollection.azure_rm_subscription_info:
+        all: true
    # - name: Get facts for all subscriptions, including ones that are disabled.
   #   azure.azcollection.azure_rm_subscription_info:
   #      client_id: "{{ client_id }}"
@@ -14,9 +17,7 @@
 
       # [ sub1, sub2, sub3 ... sub10 ]
 
-    - name: Get facts for all subscriptions, including ones that are disabled.
-      azure_rm_subscription_info:
-        all: true
+
 
 
    # - name: Lista todas las VMS para {{ suscripcion }} 
