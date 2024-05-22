@@ -9,8 +9,8 @@
         tenant: "{{ tenant }}"
         subscription_id: "{{ subscription_id }}"
          all: true
-      delegate_to: localhost
-      register: todas_suscripciones
+    #  delegate_to: localhost
+    #  register: todas_suscripciones
 
       # [ sub1, sub2, sub3 ... sub10 ]
 
